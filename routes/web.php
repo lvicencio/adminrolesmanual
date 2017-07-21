@@ -20,9 +20,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>'admin'], function(){
-  Route::get('/admin', function () {
-      return view('admin.index');
-  });
+
+    //  return view('admin.index');
+    Route::get('/admin', 'UserController@index');
+    Route::post('/admin', 'UserController@store');
+    Route::get('/usuario/{id}', 'UserController@edit');
+    Route::post('/usuario/{id}', 'UserController@update');
+    Route::get('/usuario/{id}/eliminar', 'UserController@delete');
+
 });
 Route::group(['middleware'=>'cliente'], function(){
   Route::get('/cliente', function () {
