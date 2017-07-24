@@ -30,8 +30,8 @@ Route::group(['middleware'=>'admin'], function(){
     Route::get('/usuario/{id}', 'UserController@edit');
     Route::post('/usuario/{id}', 'UserController@update');
     Route::get('/usuario/{id}/eliminar', 'UserController@delete');
-    // Route::get('/admin','UserController@buscador');
-    // Route::get('/admin/{name}','UserController@buscador');
+    Route::get('/admin','UserController@buscador');
+    Route::get('/admin/{name}','UserController@buscador');
 
 });
 Route::group(['middleware'=>'cliente'], function(){

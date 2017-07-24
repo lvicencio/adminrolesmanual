@@ -20,7 +20,9 @@ class UserController extends Controller
 
     public function buscador(Request $request)
     {
-      
+      $name = $request -> input('name');
+      $users = User::Buscador($name)->paginate(10);
+      return view('admin.index')->with(compact('users'));
     }
     // public function buscador(Request $request)
     // {
