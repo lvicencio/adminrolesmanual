@@ -59,11 +59,18 @@
                         <label for="password">Contraseña <em>(Ingresar solo si se desea cambiar)</em></label>
                          <input type="text" class="form-control" name="password" value="{{ old('password') }}">
                       </div>
-
+                  <div class="row">
+                    <div class="col-md-6">
                       <div class="form-group">
                         <button type="submit" class="btn btn-primary">Editar Usuario</button>
                       </div>
                     </form>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                      <a href="/admin" class="btn btn-sm btn-success" title="Nuevo Usuario">Volver</a>
+                    </div>
+                  </div>
 
 
 

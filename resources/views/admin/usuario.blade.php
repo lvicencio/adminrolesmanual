@@ -45,41 +45,27 @@
                       </div>
                       <div class="form-group">
                         <label for="password">Contraseña</label>
-                         <input type="text" class="form-control" name="password" value="{{ old('password',str_random(6)) }}">
+                         <input type="text" class="form-control" name="password" value="{{ old('password') }}">
                       </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+
 
                       <div class="form-group">
                         <button type="submit" class="btn btn-primary">Registrar Usuario Nuevo</button>
                       </div>
                     </form>
+                  </div>
 
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Correo</th>
-                          <th>Nombre</th>
-                          <th>Opciones</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        @foreach ($users as $user)
-                        <tr>
-                          <td>{{ $user->email }}</td>
-                          <td>{{ $user->name }}</td>
-                          <td>
-                            <a href="usuario/{{ $user->id }}" class="btn btn-sm btn-primary" title="Editar">
-                              <span class="glyphicon glyphicon-pencil"></span>
-                            </a>
-                            <a href="usuario/{{ $user->id }}/eliminar" class="btn btn-sm btn-danger" title="Eliminar" onclick="
-return confirm('¿Esta seguro de Eliminar este registro?')">
-                              <span class="glyphicon glyphicon-trash"></span>
-                            </a>
-                          </td>
-                        </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                      <a href="/admin" class="btn btn-sm btn-success" title="Nuevo Usuario">Volver</a>
+                    </div>
+                  </div>
 
+
+                  </div>
 
                 </div>
             </div>

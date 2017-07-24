@@ -23,10 +23,15 @@ Route::group(['middleware'=>'admin'], function(){
 
     //  return view('admin.index');
     Route::get('/admin', 'UserController@index');
-    Route::post('/admin', 'UserController@store');
+    Route::get('/usuario', function () {
+        return view('admin.usuario');
+    });
+    Route::post('/usuario', 'UserController@store');
     Route::get('/usuario/{id}', 'UserController@edit');
     Route::post('/usuario/{id}', 'UserController@update');
     Route::get('/usuario/{id}/eliminar', 'UserController@delete');
+    // Route::get('/admin','UserController@buscador');
+    // Route::get('/admin/{name}','UserController@buscador');
 
 });
 Route::group(['middleware'=>'cliente'], function(){

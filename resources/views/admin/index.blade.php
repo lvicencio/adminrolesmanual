@@ -27,36 +27,26 @@
 
                     @endif
 
-                    <form action="" method="POST">
-                       {{ csrf_field() }}
+                    <div class="form-group">
+                      <a href="/usuario" class="btn btn-sm btn-primary" title="Nuevo Usuario">Nuevo Usuario</a>
+                    </div>
+
+                    <form action="" method="GET">
+                       <!-- {{ csrf_field() }}-->
+
+
 
                       <div class="form-group">
-                         <label for="name">Nombre</label>
-                          <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-                       </div>
-                      <div class="form-group">
-                        <label for="email">Correo Electronico</label>
-                         <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                        <label for="name">Buscar</label>
+                         <input type="text" class="form-control" name="name" placeholder="Buscar Usuarios">
                       </div>
 
                       <div class="form-group">
-                        <label for="severity">Role</label>
-                        <select class="form-control" name="rol">
-                          <option value="visita" >Visita</option>
-                          <option value="admin" >administrador</option>
-                          <option value="cliente" >Cliente</option>
-
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Contraseña</label>
-                         <input type="text" class="form-control" name="password" value="{{ old('password') }}">
-                      </div>
-
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+                        <button type="submit" class="btn btn-default">Buscar</button>
                       </div>
                     </form>
+
+
 
 
                     <table class="table table-bordered">
@@ -90,7 +80,7 @@ return confirm('¿Esta seguro de Eliminar este registro?')">
 
                 </div>
 
-              
+
                 {{ $users->links() }}
             </div>
         </div>

@@ -18,11 +18,17 @@ class UserController extends Controller
       return view('admin.index')->with(compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function buscador(Request $request)
+    {
+      
+    }
+    // public function buscador(Request $request)
+    // {
+    //   //$users = User::all();
+    //   $name = $request -> input('name');
+    //   $users = User::Buscador($name)->get();
+    //   return view('admin.users')->with(compact('users'));
+    // }
     public function create()
     {
         //
@@ -115,7 +121,7 @@ class UserController extends Controller
       $user->name = $request->input('name');
       $user->email = $request->input('email');
       $user->rol = $request->input('rol');
-    
+
       $password = $request->input('password');
       // si esta ingresada una nueva contraseña, hacer lo sgte
       if ($password) {
