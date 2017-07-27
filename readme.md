@@ -6,9 +6,12 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Administracion de usuarios y roles basado en middleware
+Administracion de usuarios y roles basado en middleware.
+
 Creado de manera manual
 
-Rol Administrador
-Rol Cliente
-Rol Visita
+Rol Administrador.
+
+Rol Cliente.
+
+Rol Visita.
